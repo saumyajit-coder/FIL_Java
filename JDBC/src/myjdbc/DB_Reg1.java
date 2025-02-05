@@ -1,0 +1,30 @@
+package myjdbc;
+import java.util.*;
+public class DB_Reg1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the name: ");
+		String nm=sc.nextLine();
+		System.out.println("Enter the Password: ");
+		String pass=sc.nextLine();
+		System.out.println("Enter the Salary: ");
+		double sal=sc.nextDouble();
+		DbConn db=new DbConn();
+		try
+		{
+			String qry="insert into table1 values('" +nm +"','"+ pass +"'," + sal + ")";
+			//System.out.println(qry);
+			db.stat.executeUpdate(qry);
+			System.out.println("Congratulation!!");
+		}
+		catch(Exception e)
+		{
+			System.err.println(e);
+		}
+			
+			
+	}
+
+}

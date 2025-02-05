@@ -1,0 +1,17 @@
+package Thread;
+
+public class RT {
+	public static void main(String ar[])
+	{
+		try
+		{
+			Runtime r=Runtime.getRuntime();
+			Process p=r.exec("cmd /c msexcel");
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+
+}

@@ -1,0 +1,27 @@
+package myjdbc;
+
+public class Report1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		DbConn db=new DbConn();
+		try
+		{
+			//String qry="insert into table1 values('" +nm +"','"+ pass +"'," + sal + ")";
+			//System.out.println(qry);
+			//db.stat.executeUpdate(qry);
+			String qry="insert into table1 values(?,?,?)";
+			db.pstat=db.conn.prepareStatement(qry);
+			db.pstat.setString(1,nm);
+			db.pstat.setString(2,pass);
+			db.pstat.setDouble(3,sal);
+			db.stat.executeUpdate(qry);
+			System.out.println("Congratulation!!");
+		}
+		catch(Exception e)
+		{
+			System.err.println(e);
+		}
+	}
+
+}

@@ -1,0 +1,12 @@
+package Thread;
+
+public class Th2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Thread t1=new Thread();
+		//System.out.println(t1);  //Thread[#20,Thread-0,5,main]
+		System.out.println(Thread.currentThread());
+	}
+
+}
